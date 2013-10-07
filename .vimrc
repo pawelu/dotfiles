@@ -1,4 +1,4 @@
-""set path to ctrlp plugin
+"" Set path to ctrlp plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set number
@@ -27,7 +27,7 @@ set smartcase                   " ... unless they contain at least one capital l
 "" Multiple paste
 xnoremap p pgvy
 
-""When shift is held too long during save/quit command
+"" When shift is held too long during save/quit command
 :command WQ wq
 :command Wq wq
 :command W w
