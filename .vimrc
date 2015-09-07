@@ -1,16 +1,25 @@
-"" Set path to ctrlp plugin
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+"" Vundle
+set nocompatible                " choose no compatibility with legacy vi
+filetype off                    " it's changed after Vundle plugins section end
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-set number
-syntax enable
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'morhetz/gruvbox'
+Bundle 'ntpeters/vim-better-whitespace'
 
-colorscheme railscasts
+call vundle#end()
+filetype plugin indent on       " load file type plugins + indentation
+
+"" Colorscheme
+colorscheme gruvbox
+set background=dark
 
 "" Basics
-set nocompatible                " choose no compatibility with legacy vi
+set number
+syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-filetype plugin indent on       " load file type plugins + indentation
 
 "" Whitespace
 set nowrap                      " don't wrap lines
@@ -24,8 +33,13 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
-"" Multiple paste
-xnoremap p pgvy
+"" Tweaks
+xnoremap p pgvy                 " multiple paste
+set mouse=a                     " enable mouse
+
+" Open splits more naturally
+set splitbelow
+set splitright
 
 "" When shift is held too long during save/quit command
 :command WQ wq
