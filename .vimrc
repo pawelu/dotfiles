@@ -6,12 +6,14 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
+Plugin 'kchmck/vim-coffee-script'
 Bundle 'ntpeters/vim-better-whitespace'
 
 call vundle#end()
 filetype plugin indent on       " load file type plugins + indentation
 
 "" Colorscheme
+let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
 
@@ -36,10 +38,17 @@ set smartcase                   " ... unless they contain at least one capital l
 "" Tweaks
 xnoremap p pgvy                 " multiple paste
 set mouse=a                     " enable mouse
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby " use ruby syntax for jbuilder
 
-" Open splits more naturally
+"" Open splits more naturally
 set splitbelow
 set splitright
+
+"" easier navigation between buffers
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 "" When shift is held too long during save/quit command
 :command WQ wq
