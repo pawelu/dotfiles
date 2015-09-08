@@ -8,6 +8,7 @@
   alias vi='nvim'
   alias vim='nvim'
 ```
+4. Install xclip, to be able to copy from Neovim to system clipboard: `apt-get install xclip`
 
 ### Credits
 Basics, Whitespace and Searching sections are based on Mislav Marohnić's [Vim: revisited article](http://mislav.uniqpath.com/2011/12/vim-revisited/).
