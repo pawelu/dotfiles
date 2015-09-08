@@ -3,11 +3,11 @@
 1. Install [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 2. Symlink existing .vimrc: `$ ln -nfs ~/.vimrc ~/.nvimrc`
 3. Create aliases in .zshrc/.bashrc:
-```
-  alias v='nvim'
-  alias vi='nvim'
-  alias vim='nvim'
-```
+    ```
+    alias v='nvim'
+    alias vi='nvim'
+    alias vim='nvim'
+    ```
 4. Install xclip, to be able to copy from Neovim to system clipboard: `apt-get install xclip`
 
 ### Credits
