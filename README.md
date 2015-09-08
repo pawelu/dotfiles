@@ -3,6 +3,7 @@
 1. Install [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 2. Symlink existing .vimrc: `$ ln -nfs ~/.vimrc ~/.nvimrc`
 3. Create aliases in .zshrc/.bashrc:
+
     ```
     alias v='nvim'
     alias vi='nvim'
