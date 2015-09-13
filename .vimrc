@@ -44,6 +44,11 @@ au BufNewFile,BufRead *.json.jbuilder set ft=ruby " use ruby syntax for jbuilder
 set splitbelow
 set splitright
 
+"" Store swaps/backups in one global location ( '//' avoids name collisions)
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
 "" easier navigation between buffers
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
