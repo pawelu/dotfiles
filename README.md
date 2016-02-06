@@ -1,15 +1,16 @@
 # Dotfiles
 ## Vim
 1. Install [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-2. Symlink existing .vimrc: `$ ln -nfs ~/.vimrc ~/.nvimrc`
-3. Create aliases in .zshrc/.bashrc:
+2. Link vim configuration:
 
     ```
-    alias v='nvim'
-    alias vi='nvim'
-    alias vim='nvim'
+    mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+    ln -s ~/.vim $XDG_CONFIG_HOME/nvim
+    ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
     ```
-4. Install xclip, to be able to copy from Neovim to system clipboard: `apt-get install xclip`
+3. Create folders for swap etc.: `mkdir -p ~/.vim/backup/ ~/.vim/swap ~/.vim/undo`
+4. Install Vundle plugins: `:PluginInstall`
+5. Install xclip, to be able to copy from Neovim to system clipboard: `apt-get install xclip`
 
 ### Credits
 Basics, Whitespace and Searching sections are based on Mislav Marohnić's [Vim: revisited article](http://mislav.uniqpath.com/2011/12/vim-revisited/).
