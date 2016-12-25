@@ -1,16 +1,12 @@
-"" Vundle
 set nocompatible                " choose no compatibility with legacy vi
-filetype off                    " it's changed after Vundle plugins section end
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'kchmck/vim-coffee-script'
-Bundle 'ntpeters/vim-better-whitespace'
+"" vim-plug
+call plug#begin('~/.local/share/nvim/plugged')
 
-call vundle#end()
-filetype plugin indent on       " load file type plugins + indentation
+Plug 'morhetz/gruvbox'
+Plug 'ntpeters/vim-better-whitespace'
+
+call plug#end()
 
 "" Colorscheme
 let g:gruvbox_italic=1
