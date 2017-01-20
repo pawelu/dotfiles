@@ -32,6 +32,7 @@ set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
 "" Tweaks
+set ruler                       " show current cursor position
 xnoremap p pgvy                 " multiple paste
 set mouse=a                     " enable mouse
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby " use ruby syntax for jbuilder
